@@ -1,0 +1,169 @@
+<!--<form #storeClaimsForm="ngForm">
+<div class="form-group" class="col-4">
+  <br>
+  <div class="form-control" style="margin-left: 422px">
+    <label class="radio-inline" style="margin-left: 56px">
+      <input type="radio" checked value="storeclaims" name="orderadjustment" (change) = "validateType()">
+      StoreClaims
+    </label>
+    <label class="radio-inline" style="margin-left: 118px">
+      <input type="radio" value="handbill" name="orderadjustment" (change) = "validateType()">
+      HandBill
+    </label>
+
+  </div>
+</div>
+
+<div class="row" style="margin-top: 24px; margin-left: 118px">
+
+      <div class="form-control" class="col-4" style="margin-left: -37px" [class.has-error]="source.invalid && source.touched">
+        <label>Source</label>
+        <select required class="form-control" id="source" [(ngModel)]="storeClaims.source"
+                name="sourceControl" #source="ngModel">
+          <option [ngValue]="undefined" disabled  selected> Please select one option </option>
+          <option *ngFor="let storeclaim of storeClaims">{{storeclaim.source}}</option>
+        </select>
+        &lt;!&ndash;selected source {{storeClaims.source}}&ndash;&gt;
+        <span class="help-block" *ngIf="source.invalid && source.touched">
+            Source is Required
+          </span>
+      </div>
+      <div class="form-control" class="col-4" [class.has-error]="destination.invalid && destination.touched">
+        <label>Destination</label>
+        <select required class="form-control" id="destination" [(ngModel)]="storeClaims.destination"
+                name="destinationControl" #destination="ngModel">scaff
+          <option [ngValue]="undefined" disabled  selected> Please select one option </option>
+          <option *ngFor="let storeclaim of storeClaims">
+            {{storeclaim.destination}}
+          </option>
+        </select>
+        <span class="help-block" *ngIf="destination.invalid && destination.touched">
+          Destination is required
+        </span>
+      </div>
+
+  <div class="form-control" class="col-4" [class.has-error]="requisition.invalid && requisition.touched">
+        <label>Requisition</label>
+        <select required class="form-control" id="requisition" [(ngModel)]="storeClaims.requisition"
+                name="requisitionControl" #requisition="ngModel">
+          <option [ngValue]="undefined" disabled  selected> Please select one option </option>
+          <option *ngFor="let storeclaim of storeClaims">
+            {{storeclaim.requisition}}
+          </option>
+        </select>
+        <span class="help-block" *ngIf="requisition.invalid && requisition.touched">
+            Requisition is Required
+        </span>
+      </div>
+</div>
+
+<br>
+<div class="form-control" class="col-6" style="text-align: right">
+  &lt;!&ndash;<ngx-spinner></ngx-spinner>&ndash;&gt;
+  <ngx-spinner
+    size = "medium"
+    color = "#9b8383"
+    type = "ball-atom">
+    <span style="color: red"> Loading...</span>
+  </ngx-spinner>
+  <button class="btn btn-primary" type="submit" [disabled]="storeClaimsForm.invalid" (click)="searchData()">Search</button>
+  <button class="btn btn-primary" type="submit" [disabled]="storeClaimsForm.invalid" (click)="openDialog(storeClaims)">Add</button>
+  <br>
+  <strong>{{dialogResult}}</strong>
+</div>
+</form>-->
+<!--<div id="myGrid" *ngIf="loadGridData">
+  <div class="test-header">
+    <span id="selectedRows"></span>
+  </div>
+  <ag-grid-angular
+    style="width:1500px; height:350px; margin-left: 13px;"
+    class="ag-theme-balham"
+    (gridReady)="onGridReady($event)"
+    [enableSorting]="true"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    (rowSelected)="onRowSelected($event)">
+  </ag-grid-angular>
+</div>-->
+<!--<div class="form-control" class="col-6" style="text-align: right" *ngIf="rowSelected">
+  <br>
+  <button class="btn btn-primary" type="button" (click)="exportReportAsCsv()">Download</button>
+  <button class="btn btn-primary" type="button" (click)="deleteReport()">Delete</button>
+  <br>
+</div>-->
+
+<br>
+<div class="grid-50">
+  <div class="panel-module  panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">Search</h4>
+    </div>
+    <div class="searchInner">
+      <div class=" v-spacing-mini">
+        <strong>Batch Id :</strong>
+      </div>
+      <div class="form-group inverse form-group-custom">
+          <input type="text" class="form-control" id="batchID" [(ngModel)]="entertedBatchID"/>
+      </div>
+      <div class=" v-spacing-mini">
+        <strong>Upload Type :</strong>
+      </div>
+      <div class="form-group select inverse form-group-custom">
+        <label>
+          <select class="form-control" style="height:44px;" [(ngModel)]="entertedUploadType">
+            <option *ngFor="let type of uploadType" [value]="type.viewValue">
+              {{type.viewValue}}
+            </option>
+          </select>
+        </label>
+      </div>
+      <div class=" v-spacing-mini">
+        <strong>User Name :</strong>
+      </div>
+      <div class="form-group select inverse form-group-custom">
+        <label>
+          <select class="form-control" style="height:44px;" [(ngModel)]="enteredUserName">
+            <option *ngFor="let name of userNames" [value]="name.value">
+              {{name.value}}
+            </option>
+          </select>
+        </label>
+      </div>
+      <div class=" v-spacing-mini">
+        <strong>Upload Date :</strong>
+      </div>
+      <div class="form-group inverse form-group-custom">
+          <input type="date" class="form-control" style="height:44px;" [(ngModel)]="enteredUploadDate"/>
+      </div>
+      <br>
+      <div class="form-group form-group-custom col-7" style="text-align: right;">
+        <button (click)="getSearchResult()"   class="btn btn-primary">SEARCH <i class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+  <div class="claimsGrid panel-module  panel-primary" aria-hidden="false" style="width: 1400px;">
+    <div class="panel-module  panel-primary">
+      <div class="panel-heading">
+        <h4 class="panel-title">Search Results</h4>
+      </div>
+    </div>
+    <div id="myGrid" class="grid" *ngIf="loadGridData">
+      <ag-grid-angular
+        style="height:350px; margin-left: 13px;"
+        class="grid"
+        [pagination]="true"
+        (gridReady)="onGridReady($event)"
+        [enableSorting]="true"
+        [rowData]="rowData"
+        [columnDefs]="columnDefs">
+        <!--(rowSelected)="onRowSelected($event)">-->
+      </ag-grid-angular>
+    </div>
+  </div>
+</div>
+
+

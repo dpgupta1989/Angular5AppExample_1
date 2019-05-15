@@ -1,0 +1,52 @@
+<!--<div style="text-align: center" Welcome to {{title}}></div>-->
+<mat-sidenav-container fullscreen>
+  <!--Load the sidenav by defailt when page loads opened="true" -->
+  <mat-sidenav #sidenav mode="side" class="app-sidenav" opened="true">
+    <mat-toolbar color="primary" style="min-height: 78px; background: #fff;">
+      <!--future svg to go here-->
+      <!--<span class="toolbar-filler"></span>
+      <span class="title" mat-line>DCIAM</span>-->
+      <!--<div class="headerContainer">-->
+      <!--<div class="headerLogo">-->
+        <a href="/home"><img src="assets/images/LLowesLogo2016_Vertical_RGB.png" class="logoSize"></a>
+    <!--  </div>-->
+      <!--</div>-->
+      <div _ngcontent-c1="" class="background-royalBlue headerBorder"></div>
+      <button mat-icon-button (click)="sidenav.toggle()" class="mat-icon-button sidenav-toggle-button" [hidden]="!sidenav.opened">
+        <mat-icon aria-label="Menu" class="material-icons" style="color:#0471AF">toggle_on</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item class="sidenav-link" [routerLink]="['/uploadParameters']" (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>next_week</mat-icon>
+        <span class="title" mat-line>Upload Parameters</span>
+        <!--<span mat-line class="secondary">test</span>-->
+      </a>
+      <a mat-list-item class="sidenav-link" [routerLink]="['/uploadStatus']" (click)="sidenav.toggle()">
+        <!--to display the icon image-->
+        <mat-icon mat-list-icon>ballot</mat-icon>
+        <span class="title" mat-line>Upload Status</span>
+        <!--<span mat-line class="secondary">test</span>-->
+      </a>
+      <a mat-list-item class="sidenav-link" [routerLink]="['/aboutUs']" (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon><i class="material-icons">description</i></mat-icon>
+        <span class="title" mat-line>About Us</span>
+        <!--<span mat-line class="secondary">fullscreen1</span>-->
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-toolbar id="appToolbar" [ngClass]="{'toolbar-fullscreen': (fullscreen$ | async)}" color="primary" style="min-height: 78px; background: #fff;">
+    <button mat-icon-button (click)="sidenav.toggle()" class="mat-icon-button sidenav-toggle-button" [hidden]="sidenav.opened">
+      <mat-icon aria-label="Menu" class="material-icons" style="color:#0471AF">home</mat-icon>
+    </button>
+    <h1 class="headerTitle " style="text-align: center; margin-left: -137px; font-size: 29px;">
+      {{title}}
+    </h1>
+    <div _ngcontent-c1="" class="background-royalBlue headerBorder"></div>
+    <span class="toolbar-filler"></span>
+    <!--<button id="button-login" mat-button [routerLink]="['/signupin']" *ngIf="!(user | async)">Log In</button>-->
+    <span class="title" mat-line style="color: #000000">Dablu Gupta</span>
+    <button id="button-logout" mat-button style="color: #000000">Log Out</button>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

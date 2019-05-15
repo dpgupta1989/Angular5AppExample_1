@@ -1,0 +1,91 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <br>
+  <h2 style="margin-left: 530px;">Demand Upload Utility</h2>
+  <!--<div style="width: 600px; border: solid 1px blue;">
+  <div class="form-group" class="col-4" style="margin-top: 24px; margin-left: 118px">
+  <h4>Upload Type</h4>
+  <mat-form-field>
+    &lt;!&ndash;<mat-label>Select one option </mat-label>&ndash;&gt;
+    <mat-select>
+      <mat-option *ngFor="let type of uploadType" [value]="type.value">
+        {{type.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+
+  <br>
+  <div class='exportExcel' style="margin-left: 185px;" >
+    <a style="color: #3f51b5; text-decoration: underline; cursor: pointer;" (click)="downloadTemplate($event)">Download Template!</a>
+  </div>
+  <div class="form-group" class="col-4" style="margin-top: 24px; margin-left: 118px">
+    <br>
+    <label>Imports:   </label>
+    <input style="margin-left: 29px;" type="file" id="avatar" (change)="onFileChange($event)" #fileInput>
+    <button type="button" class="btn btn-sm btn-default" (click)="clearFile()" *ngIf="fileUploadedIndicator">clear file</button><br><br>
+    <Strong>{{uploadResult}}</Strong>
+    <div class="mat-error">{{fileHeaderValidErrorMsg}}</div>
+    <div class="mat-error">{{fileEmptyErrorMsg}}</div>
+    <div class="mat-error">{{fileDataInvalidErrorMsg}}</div>
+  </div>
+  <br>
+  <div class="form-group" class="col-4" style="margin-top: 24px; margin-left: 118px">
+    <button type="submit" [disabled]="_IsFileInValid || loading" class="btn btn-success">Add <i class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
+  </div>
+  </div>-->
+
+  <div class="grid-50">
+    <div class="panel-module  panel-primary">
+      <div class="panel-heading">
+        <h4 class="panel-title">Upload</h4>
+      </div>
+      <div class="searchInner">
+      <div class=" v-spacing-mini">
+        <strong>Type :</strong>
+      </div>
+      <div class=" form-group select inverse">
+        <label>
+            <select class="form-control" style="height:44px;">
+              <option *ngFor="let type of uploadType" [value]="type.value">
+                {{type.viewValue}}
+              </option>
+            </select>
+        </label>
+      </div>
+
+        <div class='exportExcel'>
+          <a style="color: #3f51b5; text-decoration: underline; cursor: pointer;" (click)="downloadTemplate($event)">Download Template!</a>
+        </div>
+
+        <div class="form-group">
+          <br>
+          <label>CSV File:   </label><br>
+          <input type="file" id="fileImport" (change)="onFileChange($event)" #fileInput>
+          <button type="button" class="btn btn-sm btn-default" (click)="clearFile()" *ngIf="fileUploadedIndicator">clear file</button><br><br>
+          <Strong>{{uploadResult}}</Strong>
+          <div class="mat-error">{{fileHeaderValidErrorMsg}}</div>
+          <div class="mat-error">{{fileEmptyErrorMsg}}</div>
+          <div class="mat-error">{{fileDataInvalidErrorMsg}}</div>
+        </div>
+
+        <div class="form-group" class="col-4" style="margin-top: 24px; margin-left: 118px">
+          <button type="submit" [disabled]="_IsFileInValid || loading" class="btn btn-primary">Upload <i class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--<br>
+  <div id="myGrid" *ngIf="loadGridData">
+    <ag-grid-angular
+      style="width:1500px; height:350px; margin-left: 13px;"
+      class="ag-theme-balham"
+      [pagination]="true"
+      (gridReady)="onGridReady($event)"
+      [enableSorting]="true"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      (rowSelected)="onRowSelected($event)">
+    </ag-grid-angular>
+  </div>-->
+</form>

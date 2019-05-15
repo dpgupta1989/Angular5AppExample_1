@@ -1,0 +1,430 @@
+#horizontalul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2d5986;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#horizontalli {
+    float: left;
+    /*border-right: 1px solid #bbb;*/
+}
+
+#horizontalli a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1px 8px;
+    text-decoration: none;
+}
+
+#horizontalli a:hover:not(.active) {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#horizontalli a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#verticalul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #2d5986;
+    position: fixed;
+    height: 100%;
+    overflow: auto;    
+    border-style: solid;
+    border-width: 1px;
+}
+
+#verticalli a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#verticalli a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#verticalli a:hover:not(.active) {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 3px;
+    border-top-width: 1px; 
+    border-top-style: solid;
+    border-top-color: #eee;
+    background-color: #2d5986;
+} 
+
+#rcorners {
+    border-radius: 10px;
+    border: 2px solid ;
+    padding: 20px;
+    width: 85px;
+    height: 10px;
+}
+
+/* .grid {
+  	display:inline-block;
+	width: calc(100% - 2px); 
+  
+
+} */
+
+/* .gridError{
+  
+  width: 500.6px;
+} */
+
+ .md-dialog-content-body {
+    text-align: center;
+} 
+
+
+.md-dialog-container {
+z-index:10000;
+background-color:rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+th, td {
+    padding: 15px;    
+}
+
+.pageHeading{
+	text-align:center;
+	padding-bottom: 10px;
+	padding-top: 20px;
+	font-size:15pt;
+}
+
+
+.mainContent{
+	width:100%;
+	padding-left: 10px;
+	padding-bottom: 20px;
+}
+
+modalContent{
+	width:100%;
+	padding-bottom: 20px;
+}
+
+#mainContent{
+	width:100%;
+}
+
+
+
+.errorMessage{
+	color: Red;
+	text-align: center;
+    font-size: 1em;
+    margin-top: 10px;
+    word-wrap: break-word;
+}
+
+.sucessMessage{
+	color: Green;
+	text-align: center;
+    font-size: 1em;
+    margin-top: 10px;
+    word-wrap: break-word;
+}
+
+.aboutCell{
+	border: 1px solid black;
+	border-collapse: collapse;
+	font-size: 20px;
+}
+
+.aboutTable{
+	width:100%; 
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.content{
+	width:100%; 
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.aboutPageContainer, .feedbackPageContainer {
+	display:inline-block;
+	margin-bottom: 20px;
+}	
+
+
+#feedbackLabels{
+	width:100px;
+}
+
+#feedbackEmail{
+	display:inline;
+	width: 500px;
+}
+
+#feedbackMessage{
+	resize: none;
+	display:inline;
+	width: 500px;
+	height:300px;
+}
+
+#inputFieldWrapper{
+	padding-top:20px;
+	padding-right:30px;
+	padding-left:30px;
+}
+
+.centerButton{
+	text-align: center;
+	height: 40px;
+	padding-bottom: 10px;
+}
+
+.bottomCenterButton{
+	text-align: center;
+	height: 40px;
+	padding-top:25px;
+	padding-bottom: 75px;
+}
+
+.inlineForm-control {
+    display: inline-block;
+}
+
+/* .ui-grid-header-cell-priamry-focus{
+	overflow: hidden;
+	text-overflow: clip;
+} */
+
+
+.defaultPageLayout{
+    width: 100%;
+}
+
+/* .ui-grid-header-cell .ui-grid-cell-contents {
+	 margin:auto;
+     height:100%;
+     white-space: normal;
+     -ms-text-overflow: clip;
+     -o-text-overflow: clip;
+     text-overflow: clip;
+     overflow: visible;
+     text-align:center;
+} */
+ 
+/*  ==================================== */
+ 
+/* Vertically Stacked Drop Down */
+#VertDropDownLabel, .VertDropDownLabel{
+	width: 120px;
+}
+
+#VertDropDownSelect, .VertDropDownSelect{
+	width: 400px;
+}
+
+#VertDropDownWrapper, .VertDropDownWrapper{
+	display:inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+/* Vertically Aligned Text Box Input */
+#VertTextBoxLabel, .VertTextBoxLabel{
+	width: 120px;
+}
+
+#VertTextBoxInput, .VertTextBoxInput{
+	width: 400px;
+	height: 28px;
+	display: inline-block;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+#VertTextBoxWrapper, .VertTextBoxWrapper{
+	display:inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+/* Vertically Stacked Date Picker */
+#VertDatePickWrapper, .VertDatePickWrapper{
+	display:inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+#VertDatePickLabel, .VertDatePickLabel{
+	width: 120px;
+}
+
+#VertDatePickSelect, .VertDatePickSelect{
+	width: 400px;
+	height: 28px;
+	display: inline-block;
+	background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+/* Horizontally aligned Wrapper */
+#HorizDropDownWrapper, .HorizDropDownWrapper{
+	display:inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+/* Horizontally aligned Drop Down */
+#HorizDropDownLabel, .HorizDropDownLabel{
+	width: 120px;
+}button
+
+#HorizDropDownSelect, .HorizDropDownSelect{
+	width: 200px;
+}
+
+/* Horizontally Stacked Date Picker */
+#HorizDatePickWrapper, .HorizDatePickWrapper{
+	display:inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+#HorizDatePickLabel, .HorizDatePickLabel{
+	width: 120px;
+}
+
+#HorizDatePickSelect, .HorizDatePickSelect{
+	width: 200px;
+	height: 28px;
+	display: inline-block;
+	background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+/* Centered Buttons */
+.CenteredButtons{
+	text-align: center;
+	margin: 5% 0 0 0;
+	height: 26px;
+}
+
+/* Centered Radio Buttons */
+.VertCenteredRadioButtons{
+	text-align: center;
+	margin: 2% 0 0 0;
+}
+
+.radio-inline {
+	    font-weight: 700;
+}
+
+
+.userAuth{
+	text-align:center; 
+	padding-bottom:20px;
+	color:Red;
+	font-size:4;
+}
+
+
+.syncIdc{
+	width: 50px;
+	padding-top: 0px;
+}
+
+#syncIdc{
+	display: inline;
+}
+
+.searchRowOne{
+	display:inline;
+}
+
+.searchRowTwo{
+	display:inline;
+}
+
+.searchRowThree{
+	display:inline-block;
+}
+
+.searchRowWrapper{
+	width: 100%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+#SearchOptionSelect{
+	width:150px;
+}
+
+.contentHeaderBlock{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px;
+	padding-right: 135px;
+}
+
+.contentHeaderText{
+	padding-left: 20px;
+	color: White;
+}	
+
+
+.search, .add, .update {
+	display:inline-block;
+	border-style: solid;
+	border-width: 2px;
+	margin-bottom: 20px;
+}
+
+.searchInner, .addInner, .updateInner {
+	display: block;
+	padding: 2%;
+}
+
+input[type=text]:disabled {
+    background: #dddddd;
+}
+
+input[type=text]:enabled {
+	background-color: #fff;
+}
+
+input[type=file] {
+    display: inline;
+}

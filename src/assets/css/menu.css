@@ -1,0 +1,84 @@
+/*
+* ==== menu.css =====
+* === version 1.0.1 ===
+*/
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+  	background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: table-cell;
+}
+
+	
+.ClosedMenuButton{
+    height: 100%;
+    width: 75px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    text-align:center;
+   	background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: table-cell;
+}
+
+.menuCategory{
+	padding: 15px 25px 15px 10px;
+}
+
+#menuCategoryTxt{
+	text-align: center;
+}
+
+.menuSubCategory{
+	height: 40px;
+	/* padding-left: 10px; */
+	padding-top: 0px;
+	padding-bottom:0px;
+}
+
+#menuSubCategoryLink{
+	padding-left: 0px;
+	padding-top: 0px;
+	height: 40px;
+	padding-top: 0px;
+	padding-bottom:0px
+}
+
+.menuContainer{
+	display: inline-block;
+	
+}
+
+.mainContentOpenMenu{
+	position:relative;
+	left:250px;
+	width: calc(100% - 265px);
+}
+
+.mainContentClosedMenu{
+	position:relative;
+	left:75px;
+	width: calc(100% - 75px);
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li.active {
+  color: rgba(0,0,0,0.87);
+  background: rgba(179, 178, 181, 0.71);
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
